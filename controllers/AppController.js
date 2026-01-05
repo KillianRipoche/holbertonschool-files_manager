@@ -1,5 +1,5 @@
-import redisClient from '../utils/redis';
-import dbClient from '../utils/db';
+import redisClient from '../utils/redis.mjs';
+import dbClient from '../utils/db.mjs';
 
 export default class AppController {
   static async getStatus(req, res) {
