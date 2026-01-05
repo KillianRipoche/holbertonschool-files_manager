@@ -3,7 +3,6 @@ import sha1 from 'sha1';
 import redisClient from '../utils/redis';
 import dbClient from '../utils/db';
 
-
 class AuthController {
   static async getConnect(req, res) {
     const authHeader = req.headers.authorization;
@@ -53,7 +52,6 @@ class AuthController {
     }
 
     await redisClient.del(key);
-
     return res.status(204).send();
   }
 }
