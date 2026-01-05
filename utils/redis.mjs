@@ -10,7 +10,7 @@ class RedisClient {
     });
 
     this.getAsync = promisify(this.client.get).bind(this.client);
-    this.setexAsync = promisify(this.client.setex).bind(this.client);  // 👈 Utilise setex au lieu de set
+    this.setexAsync = promisify(this.client.setex).bind(this.client);
     this.delAsync = promisify(this.client.del).bind(this.client);
   }
 
